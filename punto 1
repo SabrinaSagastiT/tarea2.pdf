@@ -1,1 +1,26 @@
+void algoritmo1(int n){ 
+    int i, j = 1;                                   #1
+    for(i = n * n; i > 0; i = i / 2){               #〖 log〗_2⁡〖〖(n〗^2 〗)+2
+           int suma = i + j;                        #〖 log〗_2⁡〖〖(n〗^2 〗)+1
+           printf("Suma %d\n", suma);               #〖 log〗_2⁡〖〖(n〗^2 〗)+1
+           ++j;                                     #〖 log〗_2⁡〖〖(n〗^2 〗)+1
+      }
+}
+
+T(n) = 1+  〖 (log〗_2⁡〖〖(n〗^2 〗)+2)+〖 (log〗_2⁡〖〖(n〗^2 〗)+1)+〖 (log〗_2⁡〖〖(n〗^2 〗)+1)+〖 (log〗_2⁡〖〖(n〗^2 〗)+1)
+
+T(n) = 4 log_2⁡〖n^2 〗+6 ∈O(log_2⁡〖n^2 〗)
+
+Al ejecutar el algoritmo1(8) se obtiene:
+
+Suma 65
+Suma 34
+Suma 19
+Suma 12
+Suma 9
+Suma 8
+Suma 8
+
+En cada línea se obtiene la suma del valor de i; siendo i inicialmente n*n y dividiéndose entre 2 enteramente en cada iteración hasta que llegue a 0,  más la cantidad de iteraciones realizadas en el instante.
+
 
